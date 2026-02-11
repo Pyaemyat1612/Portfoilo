@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pyae Phone Myat Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Orbitron:wght@600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            montserrat: ["Montserrat", "sans-serif"],
+            orbitron: ["Orbitron", "sans-serif"],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-montserrat text-white bg-gradient-to-br from-[#2d3a56] via-[#1f3f7a] to-[#3455a3]">
+
+
+  <nav class="fixed w-full z-50 glass-effect border-b border-gray-800 bg-black/40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span
+            class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">DA
+            BHONE</span>
+          <span class="text-xs text-primary border border-primary px-2 rounded-full">Portfolio</span>
+        </div>
+
+        <button id="mobile-menu-btn" type="button"
+          class="md:hidden inline-flex items-center justify-center rounded-md border border-white/20 p-2 text-white"
+          aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#about"
+              class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+            <a href="#skills"
+              class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+            <a href="#experience"
+              class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+            <a href="#education" <a href="#contact"
+              class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Contact
+              Me</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col gap-2 text-sm">
+          <a href="#about" class="rounded-md px-3 py-2 hover:bg-white/10">About</a>
+          <a href="#skills" class="rounded-md px-3 py-2 hover:bg-white/10">Skills</a>
+          <a href="#experience" class="rounded-md px-3 py-2 hover:bg-white/10">Experience</a>
+          <a href="#contact" class="rounded-md px-3 py-2 bg-primary hover:bg-blue-600">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="bg-gradient-to-r from-[#3c465d]/90 via-[#304f92]/90 to-[#1b56d3]/90 
+                   border border-white/20 rounded-2xl p-4 sm:p-6 shadow-xl">
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Pyae Phone <br /> <span class="text-white">Myat</span>
+
+              <span
+                class="text4xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">PORTFOILO
+
+
+            </h1>
+
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact"
+                class="px-8 py-4 bg-primary rounded-lg font-bold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/30">
+                SKILLS
+              </a>
+              <a href="#experience"
+                class="px-8 py-4 bg-card border border-gray-700 rounded-lg font-bold hover:bg-gray-700 transition-all">
+                View Work
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 blur-3xl">
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden border-2 border-gray-700 shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
+              <div class="aspect-[4/5] bg-gray-800 flex items-center justify-center relative overflow-hidden group">
+                <img
+                  src="https://internal.kanaiyacosmetics.com/storage/profile-images/Ma61PjY2n3I7xaH8s9w2hyEjcHCyOQCvjImDIQ6m.jpg"
+                  class="w-full h-full object-cover grayscale" />
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Reusable Section Style -->
+
+  <section id="about" class="bg-card py-12 border-y border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="p-6">
+          <i class="fa-solid fa-chart-line text-4xl text-primary mb-4"></i>
+          <h3 class="text-3xl font-bold text-white mb-2">5+ Years</h3>
+          [cite_Start]<p class="text-text">Experience executing strategies</p>
+        </div>
+        <div class="p-6">
+          <i class="fa-solid fa-bullseye text-4xl text-emerald-400 mb-4"></i>
+          <h3 class="text-3xl font-bold text-white mb-2">Growth</h3>
+          [Start]<p class="text-text">Focus on measurable results</p>
+        </div>
+        <div class="p-6">
+          <i class="fa-solid fa-lightbulb text-4xl text-purple-400 mb-4"></i>
+          <h3 class="text-3xl font-bold text-white mb-2">Creativity</h3>
+          [Start]<p class="text-text">Driving growth through storytelling</p>
+        </div>
+      </div>
+      <div class="mt-12 text-left max-w-3xl mx-auto">
+        <blockquote class="text-xl italic text-gray-400">
+          [Start]"I combine creativity with data to build marketing systems that actually sell. From awareness to
+          retention, I manage the entire customer journey.
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="mt-6 bg-gradient-to-r from-[#3c465d]/90 via-[#304f92]/90 to-[#1b56d3]/90 backdrop-blur-sm border border-white/20 
+                    rounded-xl shadow-lg p-5 sm:p-6">
+    <h2 class="text-xl sm:text-2xl font-bold mb-3">About Me</h2>
+    <div class="h-[2px] bg-white/20 mb-4"></div>
+
+    <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-3">
+      I am a results-driven marketing professional with over 5 years of experience
+      developing and executing successful marketing strategies across digital and traditional platforms.
+    </p>
+
+    <p class="text-gray-200 text-sm sm:text-base leading-relaxed mb-3">
+      From awareness to retention, I manage the entire customer journey
+      and focus on measurable growth.
+    </p>
+
+    <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+      I combine creativity with data-driven decision-making
+      to build marketing systems that sell.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="mt-6 bg-gradient-to-r from-[#3c465d]/90 via-[#304f92]/90 to-[#1b56d3]/90 backdrop-blur-sm border border-white/20 
+                    rounded-xl shadow-lg p-5 sm:p-6">
+    <h2 class="text-xl sm:text-2xl font-bold mb-4">Education Background</h2>
+
+    <ul class="space-y-3 text-sm sm:text-base text-gray-200">
+      <li>• ABE Level 4 in Business Administration <span class="italic text-gray-300">(UK pathway)</span></li>
+      <li>• Diploma in Marketing & Brand Management <span class="italic text-gray-300">(Strategy First
+          University)</span></li>
+      <li>• Diploma in Digital Marketing Strategy & Advertising <span class="italic text-gray-300">(National
+          Management Academy)</span></li>
+    </ul>
+  </section>
+
+  <!-- JOB EXPERIENCE -->
+  <section id="experience" class="mt-6 bg-gradient-to-r from-[#3c465d]/90 via-[#304f92]/90 to-[#1b56d3]/90 backdrop-blur-sm border border-white/20 
+                    rounded-xl shadow-lg p-5 sm:p-6">
+
+    <h2 class="text-xl sm:text-2xl font-bold mb-4-">Job Experience</h2>
+
+    <ul class="space-y-3 text-sm sm:text-base text-gray-200"></ul>
+    <div class="h-[2px] bg-white/20 mb-4"></div>
+
+    <article class="mb-10">
+      <h3 class="space-y-3 text-sm sm:text-base text-gray-200"> DIGITAL MARKETING MANAGER</h3>
+      <p class="space-y-3 text-sm sm:text-base text-gray-200">(2025 jan to 2025 September)</p>
+      <p class="space-y-3 text-sm sm:text-base text-gray-200">AT LUCKY DIAMONDS MYANMAR</p>
+    </article>
+
+    <article class="mb-10">
+      <h3 class="space-y-3 text-sm sm:text-base text-gray-200">ASS. DIGITAL MARKETING MANAGER</h3>
+      <p class="space-y-3 text-sm sm:text-base text-gray-200">(2025 jan to 2025 july)</p>
+      <p class="space-y-3 text-sm sm:text-base text-gray-200">AT BANG TENG INTERNATIONAL LOGISTICS CO.,LTD</p>
+    </article>
+
+    <article>
+      <h3 class="space-y-3 text-sm sm:text-base text-gray-200">DIGITAL MARKETER</h3>
+      <p class="space-y-3 text-sm sm:text-base text-gray-200">(2023 jan to 2024)</p>
+      <p class="space-y-3 text-sm sm:text-base text-gray-200">AT BAY MA KHA PHARMACY</p>
+    </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="mt-6 bg-gradient-to-r from-[#3c465d]/90 via-[#304f92]/90 to-[#1b56d3]/90 backdrop-blur-sm border border-white/20 
+                    rounded-xl shadow-lg p-5 sm:p-6">
+    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center 
+                  border-b border-white/20 pb-3 mb-6 gap-2">
+      <h2 class="text-2x sm:text-2xl font-bold">Skills</h2>
+      <span class="uppercase tracking-wide text-2xl font-medium sm:text-2x text-gray-300">
+        Creative Strategy Marketing
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm sm:text-base text-gray-200">
+      <ul class="space-y-2">
+        <li>Brand & Marketing Management</li>
+        <li>Content & Social Media Marketing</li>
+        <li>Pay-Per Click Advertising On Digital Platforms</li>
+        <li>Customer Relationship Management</li>
+        <li>Affiliate and Influencer Marketing</li>
+        <li>Competitors And Market Data Analysis</li>
+        <li>Content Creation And Copywriting Skill</li>
+        <li>Website Creation And Development (Basic)</li>
+        <li>Project Management</li>
+
+
+      </ul>
+
+      <ul class="space-y-2">
+        <li>AI in Marketing</li>
+        <li>SEO/SEM (Intermediate)</li>
+        <li>E-commerce Marketing</li>
+        <li>Event Planning Management</li>
+        <li>Production Management</li>
+        <li>Business Development Skills</li>
+        <li>Sales Management</li>
+        <li>Performance Marketing Reporting Skill</li>
+
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- SOFT SKILLS -->
+  <section class="mt-6 bg-gradient-to-r from-[#3c465d]/90 via-[#304f92]/90 to-[#1b56d3]/90 backdrop-blur-sm border border-white/20 
+                    rounded-xl shadow-lg p-5 sm:p-6">
+    <h2 class="text-xl sm:text-2xl font-bold border-b border-white/20 pb-3 mb-6">
+      Soft Skills
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <ul class="space-y-2 text-sm sm:text-base text-gray-200">
+        <li>Creativity</li>
+        <li>Communication</li>
+        <li>Leadership</li>
+        <li>Problem Solving and Critical Thinking</li>
+        <li>Time Management and Organzation</li>
+        <li>Work Ethic and Professionalism</li>
+        <li>Adaptability and Flexible</li>
+        <li>Interpersonal Skills</li>
+
+      </ul>
+
+      <!-- <div class="rounded-xl overflow-hidden border border-white/20">
+          <img src="./BB.jpg" class="w-full h-full object-cover min-h-[200px]" />
+        </div> -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="mt-6 bg-gradient-to-r from-[#3c465d]/90 via-[#304f92]/90 to-[#1b56d3]/90 backdrop-blur-sm border border-white/20 
+                    rounded-xl shadow-lg p-5 sm:p-6">
+    <h2 class="text-xl sm:text-2xl font-bold border-b border-white/20 pb-3 mb-6">
+      Contact Info
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm sm:text-base text-gray-200">
+      <div>📞 09 954355505</div>
+      <div>📧 pyaephonemyat1612@gmail.com</div>
+      <div>🌐 www.dabhoneportfolio.info</div>
+      <div>📍 Yangon, Myanmar</div>
+
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
