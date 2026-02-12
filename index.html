@@ -28,6 +28,166 @@
       }
     }
   </script>
+  <style>
+    .neon-text {
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c6f7ff;
+      text-shadow:
+        0 0 6px rgba(90, 214, 255, 0.9),
+        0 0 16px rgba(0, 180, 255, 0.8),
+        0 0 28px rgba(0, 120, 255, 0.7),
+        0 0 44px rgba(0, 255, 180, 0.5);
+      animation: neon-flicker 3.4s infinite;
+    }
+
+    .neon-text::after {
+      content: "";
+      position: absolute;
+      inset: -8px -10px;
+      border-radius: 999px;
+      background: radial-gradient(circle at center,
+          rgba(0, 255, 255, 0.25),
+          rgba(0, 150, 255, 0.1) 40%,
+          rgba(0, 0, 0, 0) 70%);
+      filter: blur(10px);
+      opacity: 0.8;
+      z-index: -1;
+      animation: neon-pulse 4.8s ease-in-out infinite;
+    }
+
+    .neon-wave {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(90deg,
+          rgba(120, 240, 255, 0.9),
+          rgba(0, 170, 255, 1),
+          rgba(0, 255, 200, 0.95),
+          rgba(120, 240, 255, 0.9));
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: neon-wave 2.8s linear infinite;
+    }
+
+    .neon-wave::before {
+      content: "";
+      position: absolute;
+      left: -6%;
+      right: -6%;
+      top: 55%;
+      height: 2px;
+      background: linear-gradient(90deg,
+          rgba(0, 255, 255, 0),
+          rgba(0, 255, 255, 0.85),
+          rgba(0, 255, 255, 0));
+      filter: blur(1px);
+      animation: neon-sweep 2.8s linear infinite;
+    }
+
+    .neon-slide {
+      position: relative;
+      display: inline-block;
+      transform: translateX(-24px);
+      opacity: 0;
+      animation: neon-slide-in 0.9s ease-out forwards;
+    }
+
+    .neon-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.65) 45%,
+          rgba(255, 255, 255, 0) 70%);
+      transform: translateX(-120%);
+      animation: neon-shine 2.6s ease-in-out 0.3s infinite;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    @keyframes neon-flicker {
+      0%,
+      16%,
+      20%,
+      22%,
+      100% {
+        opacity: 1;
+      }
+      18%,
+      21% {
+        opacity: 0.55;
+      }
+      24% {
+        opacity: 0.75;
+      }
+      42% {
+        opacity: 0.9;
+      }
+      70% {
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes neon-pulse {
+      0%,
+      100% {
+        transform: scale(0.98);
+        opacity: 0.65;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+    }
+
+    @keyframes neon-wave {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+
+    @keyframes neon-sweep {
+      0% {
+        transform: translateX(-20%);
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(20%);
+        opacity: 0.3;
+      }
+    }
+
+    @keyframes neon-slide-in {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes neon-shine {
+      0% {
+        transform: translateX(-120%);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateX(120%);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 
 <body class="font-montserrat text-white bg-gradient-to-br from-[#2d3a56] via-[#1f3f7a] to-[#3455a3]">
@@ -93,6 +253,9 @@
 
 
             </h1>
+            <div class="relative inline-block mb-6">
+              <span class="neon-text neon-wave neon-slide text-base sm:text-lg">A Professional Full Stack Marketer</span>
+            </div>
 
             </p>
             <div class="flex flex-wrap gap-4">
@@ -234,7 +397,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm sm:text-base text-gray-200">
       <ul class="space-y-2">
         <li>Brand & Marketing Management</li>
-        <li>Content & Social Media Marketing</li>
+        <li>Content & Social Media Marketing Management</li>
         <li>Pay-Per Click Advertising On Digital Platforms</li>
         <li>Customer Relationship Management</li>
         <li>Affiliate and Influencer Marketing</li>
