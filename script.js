@@ -39,7 +39,7 @@ if (mobileMenuBtn && mobileMenu) {
 const typingTitle = document.getElementById('typing-title');
 
 if (typingTitle) {
-  const typingPhrases = ['A Professional', 'A Full Stacl Marketer'];
+  const typingPhrases = ['A Professional Full Stack Marketer'];
   const typingSpeed = 95;
   const deletingSpeed = 55;
   const pauseAfterType = 1300;
