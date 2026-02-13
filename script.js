@@ -35,3 +35,46 @@ if (mobileMenuBtn && mobileMenu) {
     });
   });
 }
+
+const typingTitle = document.getElementById('typing-title');
+
+if (typingTitle) {
+  const typingPhrases = ['A Professional', 'A Full Stack Marketer'];
+  const typingSpeed = 95;
+  const deletingSpeed = 55;
+  const pauseAfterType = 1300;
+  const pauseAfterDelete = 350;
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const runTyping = () => {
+    const currentPhrase = typingPhrases[phraseIndex];
+    typingTitle.textContent = currentPhrase.slice(0, charIndex);
+
+    if (!isDeleting && charIndex < currentPhrase.length) {
+      charIndex += 1;
+      setTimeout(runTyping, typingSpeed);
+      return;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      isDeleting = true;
+      setTimeout(runTyping, pauseAfterType);
+      return;
+    }
+
+    if (isDeleting && charIndex > 0) {
+      charIndex -= 1;
+      setTimeout(runTyping, deletingSpeed);
+      return;
+    }
+
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+    setTimeout(runTyping, pauseAfterDelete);
+  };
+
+  runTyping();
+}

@@ -109,6 +109,13 @@
       pointer-events: none;
     }
 
+    .neon-typing {
+      border-right: 2px solid rgba(120, 240, 255, 0.95);
+      padding-right: 0.2rem;
+      white-space: nowrap;
+      animation: neon-caret 0.9s steps(1) infinite;
+    }
+
     @keyframes neon-flicker {
       0%,
       16%,
@@ -187,6 +194,17 @@
         opacity: 0;
       }
     }
+
+    @keyframes neon-caret {
+      0%,
+      49% {
+        border-color: rgba(120, 240, 255, 0.95);
+      }
+      50%,
+      100% {
+        border-color: transparent;
+      }
+    }
   </style>
 </head>
 
@@ -254,7 +272,7 @@
 
             </h1>
             <div class="relative inline-block mb-6">
-              <span class="neon-text neon-wave neon-slide text-base sm:text-lg">A Professional Full Stack Marketer</span>
+              <span id="typing-title" class="neon-text neon-wave neon-slide neon-typing text-base sm:text-lg" aria-live="polite">A Professional</span>
             </div>
 
             </p>
